@@ -29,6 +29,6 @@ export async function POST( request: Request) {
     return NextResponse.json({msg:"Entry updated successfully"});
   } catch (error) {
     console.error('Failed to add entry:', error);
-    return NextResponse.json({ error: `Server error: ${error.message}` }); // Include the error message and a 500 status code
+    return NextResponse.json({ error: `Server error` }); // Include the error message and a 500 status code
   }
 }
