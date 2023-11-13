@@ -270,13 +270,15 @@ const TableDynamic: React.FC = () => {
                 />
               </ModalBody>
 
-              <ModalFooter>
-                <Button color="danger" variant="light" onPress={onClose}>
-                  Close
-                </Button>
-                <Button color="primary" onPress={addEntry}>
-                  Action
-                </Button>
+              <ModalFooter className="flex">
+                <div className="flex flex-col w-full gap-2">
+                  <Button color="danger" variant="light" onPress={onClose}>
+                    Close
+                  </Button>
+                  <Button color="primary" onPress={addEntry}>
+                    Action
+                  </Button>
+                </div>
               </ModalFooter>
             </>
           )}
