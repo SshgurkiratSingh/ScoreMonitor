@@ -9,7 +9,7 @@ export async function GET() {
   try {
     const entries = await prisma.entry.findMany();
 
-    const response = NextResponse.json(entries);
+    const response = NextResponse.json({entries,rand:Math.random()});
 response.headers.append('Cache-Control', 'no-store, max-age=0');
 return response;
 

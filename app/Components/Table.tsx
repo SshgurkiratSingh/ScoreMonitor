@@ -137,7 +137,7 @@ const TableDynamic: React.FC = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get("/api/get-entries");
-      setData(response.data);
+      setData(response.data.entries);
       toast.success("Data fetched successfully");
     } catch (error) {
       // Handle the error appropriately
@@ -160,7 +160,7 @@ const TableDynamic: React.FC = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get("/api/get-entries");
-        setData(response.data);
+        setData(response.data.entries);
       } catch (error) {
         // toast.error("Error fetching data");
       }
