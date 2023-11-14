@@ -167,6 +167,7 @@ const TableDynamic: React.FC = () => {
     };
 
     fetchData();
+    onOpenChange();
   }, []);
   /**
    * Handles the change event of the input field.
