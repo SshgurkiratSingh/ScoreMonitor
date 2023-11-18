@@ -207,84 +207,6 @@ const TableDynamic: React.FC = () => {
 
   return (
     <div>
-      <Modal
-        isOpen={isOpen}
-        onOpenChange={onOpenChange}
-        isDismissable={false}
-        className="dark"
-        aria-labelledby="modal-title"
-      >
-        <ModalContent>
-          {(onClose) => (
-            <>
-              <ModalHeader className="flex flex-col gap-1">
-                Add Entry
-              </ModalHeader>
-              <ModalBody>
-                <Input
-                  isClearable
-                  label="Board No."
-                  value={newEntry.boardNo.toString()}
-                  onChange={(e) => handleEntryChange(e, "boardNo")}
-                />
-                <Input
-                  isClearable
-                  label="NS Pair No."
-                  value={newEntry.nsPairNo.toString()}
-                  onChange={(e) => handleEntryChange(e, "nsPairNo")}
-                />
-                <Input
-                  isClearable
-                  label="EW Pair No."
-                  value={newEntry.ewPairNo.toString()}
-                  onChange={(e) => handleEntryChange(e, "ewPairNo")}
-                />
-                <Input
-                  isClearable
-                  label="Contract"
-                  value={newEntry.contract}
-                  onChange={(e) => handleEntryChange(e, "contract")}
-                />
-                <Input
-                  isClearable
-                  label="By"
-                  value={newEntry.by}
-                  onChange={(e) => handleEntryChange(e, "by")}
-                />
-                <Input
-                  isClearable
-                  label="Result"
-                  value={newEntry.result}
-                  onChange={(e) => handleEntryChange(e, "result")}
-                />
-                <Input
-                  isClearable
-                  label="NS Score"
-                  value={newEntry.nsScore.toString()}
-                  onChange={(e) => handleEntryChange(e, "nsScore")}
-                />
-                <Input
-                  isClearable
-                  label="EW Score"
-                  value={newEntry.ewScore.toString()}
-                  onChange={(e) => handleEntryChange(e, "ewScore")}
-                />
-              </ModalBody>
-
-              <ModalFooter className="flex">
-                <div className="flex flex-col w-full gap-2">
-                  <Button color="danger" variant="light" onPress={onClose}>
-                    Close
-                  </Button>
-                  <Button color="primary" onPress={addEntry}>
-                    Action
-                  </Button>
-                </div>
-              </ModalFooter>
-            </>
-          )}
-        </ModalContent>
-      </Modal>
       <Input
         isClearable
         placeholder="Search..."
@@ -295,9 +217,7 @@ const TableDynamic: React.FC = () => {
         <Button color="primary" onClick={fetchData} size="sm">
           <MdRefresh /> {/* Icon */}
         </Button>
-        <Button color="secondary" onPress={onOpen} size="sm">
-          <MdAdd /> {/* Icon */}
-        </Button>{" "}
+
         {data.length === 0 && <Loading type="spinningBubbles" color="#fff" />}
       </div>
 

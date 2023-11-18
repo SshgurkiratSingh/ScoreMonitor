@@ -8,9 +8,8 @@ import {
   Image,
   Button,
 } from "@nextui-org/react";
-import TableDynamic from "./Components/Table";
+import TableDynamic from ".././Components/Table";
 import { Toaster } from "react-hot-toast";
-import AddLog from "./Components/UpdatedTable";
 
 export default function Home() {
   return (
@@ -48,18 +47,19 @@ export default function Home() {
         }}
       />
 
-      <Card className="w-full dark">
+      <Card className="max-w-[400px] dark">
         <CardHeader className="flex gap-3">
           <div className="flex flex-col">
-            <Link href="/Table">
-              <Button>View Table</Button>
+            <Link href="/">
+              <Button>Add Entry</Button>
             </Link>
+            <p className="text-small text-default-500"></p>
           </div>
         </CardHeader>
 
         <Divider />
         <CardBody>
-          <AddLog />
+          <TableDynamic />
         </CardBody>
         <Divider />
         <CardFooter></CardFooter>
