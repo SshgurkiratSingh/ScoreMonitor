@@ -1,26 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import {
-  Input,
-  Table,
-  TableBody,
-  TableCell,
-  TableColumn,
-  TableHeader,
-  TableRow,
-  Modal,
-  Button,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  useDisclosure,
-  Chip,
-} from "@nextui-org/react";
-import Loading from "react-loading";
+import { Input, Button } from "@nextui-org/react";
 
-import { formatDistanceToNow } from "date-fns";
-import { MdRefresh, MdEdit, MdDelete, MdAdd } from "react-icons/md";
 import axios from "axios";
 import toast from "react-hot-toast";
 export interface Entry {
@@ -69,6 +50,13 @@ const AddLog = () => {
     ewScore: 0,
   });
 
+  /**
+   * Handles the change event of the input field.
+   *
+   * @param {React.ChangeEvent<HTMLInputElement>} e - The change event object.
+   * @param {keyof Entry} fieldName - The name of the field being changed.
+   * @return {void} This function does not return a value.
+   */
   const handleEntryChange = (
     e: React.ChangeEvent<HTMLInputElement>,
     fieldName: keyof Entry

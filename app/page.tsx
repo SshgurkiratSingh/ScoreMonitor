@@ -5,10 +5,9 @@ import {
   CardFooter,
   Divider,
   Link,
-  Image,
   Button,
 } from "@nextui-org/react";
-import TableDynamic from "./Components/Table";
+
 import { Toaster } from "react-hot-toast";
 import AddLog from "./Components/UpdatedTable";
 
